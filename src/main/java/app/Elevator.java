@@ -1,13 +1,19 @@
 package app;
 
+import java.util.Random;
+
 public class Elevator {
     // properties
+    private final int MAX_FLOOR = 3;
+    private final int MIN_FLOOR = 1;
     private int elevatorCurrentFloor;
-    private int personCurrentFloor = 1;
+    private int personCurrentFloor;
 
     // constructors
     public Elevator() {
+        Random rand = new Random();
         this.elevatorCurrentFloor = 1;
+        this.personCurrentFloor = rand.nextInt((MAX_FLOOR - MIN_FLOOR) + 1) + MIN_FLOOR;
     }
 
     // methods
