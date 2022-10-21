@@ -53,4 +53,16 @@ public class ElevatorTest {
         // Verify o Assert
         assertEquals(elevator.getPersonCurrentFloor(), elevatorAfterCall);
     }
+
+    @Test
+    public void shouldPersonSelectFloor() {
+        // Prepare test
+        Elevator elevator = new Elevator();
+
+        // Test logic
+        int elevatorAfterSelect = elevator.selectFloor(2);
+
+        // Verify o Assert
+        assertEquals(2, elevatorAfterSelect);
+    }
 }
