@@ -6,6 +6,7 @@ public class Elevator {
 
     // constructors
     public Elevator() {
+        this.elevatorCurrentFloor = 1;
     }
 
     // methods
@@ -15,6 +16,6 @@ public class Elevator {
     }
 
     public int getElevatorCurrentFloor() {
-        return 1;
+        return elevatorCurrentFloor;
     }
 }
