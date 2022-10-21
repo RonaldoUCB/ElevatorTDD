@@ -41,4 +41,16 @@ public class ElevatorTest {
         // Verify o Assert
         assertTrue(personCurrentFloor >= 1 && personCurrentFloor <= 3);
     }
+
+    @Test
+    public void shouldPersonCallElevator() {
+        // Prepare test
+        Elevator elevator = new Elevator();
+
+        // Test logic
+        int elevatorAfterCall = elevator.callElavatorToFloor();
+
+        // Verify o Assert
+        assertEquals(elevator.getPersonCurrentFloor(), elevatorAfterCall);
+    }
 }
