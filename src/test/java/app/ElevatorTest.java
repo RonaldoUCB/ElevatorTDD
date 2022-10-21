@@ -28,4 +28,16 @@ public class ElevatorTest {
         // Verify o Assert
         assertEquals(1, elevatorCurrentFloor);
     }
+
+    @Test
+    public void shouldAssignPersonToFloor() {
+        // Prepare test
+        Elevator elevator = new Elevator();
+
+        // Test logic
+        int personCurrentFloor = elevator.getPersonCurrentFloor();
+
+        // Verify o Assert
+        assertTrue(personCurrentFloor >= 1 && personCurrentFloor <= 3);
+    }
 }
