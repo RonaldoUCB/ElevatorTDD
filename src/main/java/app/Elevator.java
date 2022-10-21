@@ -3,6 +3,7 @@ package app;
 public class Elevator {
     // properties
     private int elevatorCurrentFloor;
+    private int personCurrentFloor = 1;
 
     // constructors
     public Elevator() {
@@ -17,5 +18,9 @@ public class Elevator {
 
     public int getElevatorCurrentFloor() {
         return elevatorCurrentFloor;
+    }
+
+    public int getPersonCurrentFloor() {
+        return personCurrentFloor;
     }
 }
