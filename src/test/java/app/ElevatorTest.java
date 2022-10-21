@@ -56,7 +56,9 @@ public class ElevatorTest {
 
     @Test
     public void shouldPersonSelectFloor() throws Exception {
-        // Prepare test
+        // Prepare test:
+        // Constructor with personCurrentFloor is used to avoid exception when random
+        // assigning a person to floor matches selected floor
         Elevator elevator = new Elevator(1);
 
         // Test logic
