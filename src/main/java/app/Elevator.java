@@ -2,6 +2,7 @@ package app;
 
 public class Elevator {
     public Person createPerson() {
-        return new Person();
+        Person person = new Person();
+        return person;
     }
 }
