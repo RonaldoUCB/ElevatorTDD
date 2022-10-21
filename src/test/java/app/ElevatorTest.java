@@ -55,9 +55,9 @@ public class ElevatorTest {
     }
 
     @Test
-    public void shouldPersonSelectFloor() {
+    public void shouldPersonSelectFloor() throws Exception {
         // Prepare test
-        Elevator elevator = new Elevator();
+        Elevator elevator = new Elevator(1);
 
         // Test logic
         int elevatorAfterSelect = elevator.selectFloor(2);

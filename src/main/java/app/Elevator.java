@@ -16,6 +16,11 @@ public class Elevator {
         this.personCurrentFloor = rand.nextInt((MAX_FLOOR - MIN_FLOOR) + 1) + MIN_FLOOR;
     }
 
+    public Elevator(int personCurrentFloor) {
+        this.elevatorCurrentFloor = 1;
+        this.personCurrentFloor = personCurrentFloor;
+    }
+
     // methods
     public Person createPerson() {
         Person person = new Person();
@@ -27,8 +32,12 @@ public class Elevator {
         return elevatorCurrentFloor;
     }
 
-    public int selectFloor(int floor) {
-        return floor;
+    public int selectFloor(int floor) throws Exception {
+        if (floor == personCurrentFloor) {
+            throw new Exception("The selected floor can not be equal to the person current floor");
+        }
+        elevatorCurrentFloor = floor;
+        return elevatorCurrentFloor;
     }
 
     public int getElevatorCurrentFloor() {
