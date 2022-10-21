@@ -23,7 +23,8 @@ public class Elevator {
     }
 
     public int callElavatorToFloor() {
-        return personCurrentFloor;
+        elevatorCurrentFloor = personCurrentFloor;
+        return elevatorCurrentFloor;
     }
 
     public int getElevatorCurrentFloor() {
